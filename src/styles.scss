@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: gray;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("../assets/imagenes/Principal.jpg");
+}
+
+.contenedor{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: auto;
+}
+
+.formulario{
+  background: #fff;
+  margin-top: 150px;
+  padding: 3px;
+}
+
+h1{
+  text-align: center;
+  color: #1a2537;
+  font-size: 40px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type=tel]{
+  color: black;
+  background-color: #C8C5C5;
+  font-size: 24px;
+  width: 100%;
+  padding: 10px;
+  border: 3px none;
+  border-radius: 22px;
+}
+
+.input-contenedor{
+  margin-bottom: 15px;
+  border: 1px solid #aaa;
+  border: 3px none;
+  border-radius: 22px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: auto;
+}
+
+.button{
+  border: none;
+  width: 100%;
+  color: black;
+  font-size: 20px;
+  background: #1a2537;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 3px none;
+  border-radius: 22px;
+  background-color: #ABB095;
+  display: block;
+  margin: 0 auto;
+
+
+}
+
+@media(min-width: 768px) {
+  .formulario{
+      margin: auto;
+      width: 500px;
+      margin-top: 150px;
+      border-radius: 2%;
+  }
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  size: 120%;
+}

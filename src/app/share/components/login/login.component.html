@@ -1,0 +1,18 @@
+
+<body>
+  <form [formGroup]="fgValidacion" class="formulario">
+      <h1>Iniciar sesión</h1>
+      <div class="contenedor">
+          <div class="logo">
+              <img src="../../../../../assets/imagenes/Logout.jpg" alt="logo">
+          </div>
+          <div class="input-contenedor">
+              <input formControlName="username" type="text"  placeholder="Nombre de usuario" >
+          </div>
+          <div class="input-contenedor">
+              <input   formControlName="password" type="password" placeholder="Contraseña" >
+          </div>
+          <button type="button" (click)="identificarusuario()" class="button">Iniciar sesión</button>
+      </div>
+  </form>
+</body>
