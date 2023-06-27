@@ -172,48 +172,38 @@ export class PrincipalComponent {
   searchType(busquedaTipo : number){
     if(busquedaTipo == 1 ){
       this.tipoActivo = "maquinaria";
-      this.apiService.getByType(this.tipoActivo)
-      .subscribe( data=>{
-        this.activeTipe = data
-      })
-      //alert("vas a consultar Maquinaria");
+      const isMatchActivo = activo => activo.type == this.tipoActivo;
+      this.activeTipe = this.archives22.filter(isMatchActivo)
+      console.log("estos son mis activos de tipo "+ this.tipoActivo);
+      console.log(this.activeTipe);
       this.showTableType = true;
-      //console.log(this.busquedaTipo);
     }
     else if(busquedaTipo == 2){
-      //alert("vas a consultar inmueble");
-      this.tipoActivo = "Inmueble";
-      this.apiService.getByType(this.tipoActivo)
-      .subscribe( data=>{
-        this.activeTipe = data
-      })
+      this.tipoActivo = "inmueble";
+      const isMatchActivo = activo => activo.type == this.tipoActivo;
+      this.activeTipe = this.archives22.filter(isMatchActivo)
+      console.log("estos son mis activos de tipo "+ this.tipoActivo);
+      console.log(this.activeTipe);
       this.showTableType = true;
-      //console.log(this.busquedaTipo);
     }
     else if(busquedaTipo == 3){
-      //alert("vas a consultar Material de oficina");
       this.tipoActivo = "material oficina";
-      this.apiService.getByType(this.tipoActivo)
-      .subscribe( data=>{
-        this.activeTipe = data
-      })
+      const isMatchActivo = activo => activo.type == this.tipoActivo;
+      this.activeTipe = this.archives22.filter(isMatchActivo)
+      console.log("estos son mis activos de tipo "+ this.tipoActivo);
+      console.log(this.activeTipe);
       this.showTableType = true;
-      //console.log(this.busquedaTipo);
     }
     else{
       alert("por favor ingrese un tipo valido");
       this.showTableType = false;
-      //console.log(this.busquedaTipo);
     }
 
   }
 
   searchDate(busquedaFecha: Date){
     this.fechaEnviar = busquedaFecha.getFullYear()+"-"+ (busquedaFecha.getMonth()+1) + "-"+ busquedaFecha.getDate();
-      //alert("vas a consultar la fecha = "+ this.fechaEnviar);
     if(busquedaFecha){
-
-       //alert("vas a consultar la fecha quemada = "+ this.fechaEnviar);
       this.apiService.getByDate(this.fechaEnviar)
       .subscribe(data =>{
         this.activeDate = data;
@@ -222,13 +212,11 @@ export class PrincipalComponent {
     }else{
       alert("por favor ingrese un tipo valido");
       this.showTableType = false;
-      //console.log(this.busquedaTipo);
     }
   }
 
   searchSerie(busquedaSerial: string){
     this.showTableType = true;
-   // alert("vas a consultar por Serial "+ this.busquedaSerial);
     console.log(this.busquedaSerial);
     this.apiService.getBySerie(this.busquedaSerial)
       .subscribe( data=>{
