@@ -2,7 +2,7 @@
 <div class="content">
   <p>
     Bienvenido, <br><br>
-    <strong>Constructora Futuro</strong> <br><br>
+    <strong>Constructora Futuro 1</strong> <br><br>
     Esta solución le brindara información detallada sobre los activos fijos de la compañia ademas le permitira una busqueda por tipo, fecha de compra y serial de cada uno de los mismos<br><br>
   </p>
 
@@ -113,12 +113,12 @@
       <p>haz seleccinado Fecha</p>
       <p>Ingresa la fecha en la cual se compro el activo</p>
       <input matInput [matDatepicker]="picker" [(ngModel)]="this.busquedaFecha">
-      
+
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
-  
-   
-      
+
+
+
 
       <br>
       <button (click)="searchDate(this.busquedaFecha)" mat-raised-button color="primary">Consultar</button>
