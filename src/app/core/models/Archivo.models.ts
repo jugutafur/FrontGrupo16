@@ -38,11 +38,6 @@ export interface Purchuse{
 export interface Active{
   id:number;
   type : string;
-  city : string;
-  nameEmployee : string;
-  idEmployee : number;
-  idPosition : number;
-  positionResponsible : string;
   name : string;
   description : string;
   tall  : string;

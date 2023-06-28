@@ -7,12 +7,17 @@
               <img src="../../../../../assets/imagenes/Logout.jpg" alt="logo">
           </div>
           <div class="input-contenedor">
-              <input formControlName="username" type="text"  placeholder="Nombre de usuario" >
+              <input formControlName="username" type="text" autocomplete="on" placeholder="Nombre de usuario" >
           </div>
           <div class="input-contenedor">
-              <input   formControlName="password" type="password" placeholder="Contraseña" >
+              <input   formControlName="password" type="password" autocomplete="on" placeholder="Contraseña" >
           </div>
           <button type="button" (click)="identificarusuario()" class="button">Iniciar sesión</button>
       </div>
   </form>
 </body>
+
+
+<!-- <input type="text" name="username" autocomplete="on" placeholder="Nombre de usuario" >
+<input type="password" name="password" autocomplete="on" placeholder="Contraseña" >
+https://stackoverflow.com/questions/54970352/input-elements-should-have-autocomplete-attributes -->

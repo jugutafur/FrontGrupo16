@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { archivo, Person, Machine, Purchuse, Active } from '../../../core/models/Archivo.models';
 import { ApiService } from '../../../core/services/service.service';
 import { ToastrService } from 'ngx-toastr';
@@ -8,7 +8,7 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './crud.component.html',
   styleUrls: ['./crud.component.scss']
 })
-export class CrudComponent implements OnInit {
+export class CrudComponent {
 
   habilitarCreate : boolean = false;
   habilitarUpdate : boolean = false;
@@ -22,11 +22,6 @@ export class CrudComponent implements OnInit {
   enviarActivo : Active = {
     id:null,
     type : null,
-    city : null,
-    nameEmployee : null,
-    idEmployee : null,
-    idPosition : null,
-    positionResponsible : null,
     name : null,
     description : null,
     tall  : null,
@@ -42,9 +37,6 @@ export class CrudComponent implements OnInit {
     private apiService: ApiService,
     private toastrService: ToastrService
   ) { }
-
-  ngOnInit(): void {
-  }
 
   create(){
     this.habilitarCreate=true;
@@ -68,8 +60,7 @@ export class CrudComponent implements OnInit {
 
   Enviar(){
     this.habilitarCreate=false;
-    //console.log("esto es el objeto que envio"+ this.enviarActivo);
-    this.apiService.createActive(this.enviarActivo).subscribe();
+    console.log("esto es el objeto que envio"+ this.enviarActivo);
     this.toastrService.success("Registro Guardado con exito");
     this.toastrService.success("Por favor actualizar la tabla");
   }
@@ -99,6 +90,4 @@ export class CrudComponent implements OnInit {
       }
     })
   }
-
-
 }
