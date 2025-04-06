@@ -1,26 +1,25 @@
-<body>
-  <form [formGroup]="fgValidacion" class="formulario">
-            <div class="contenedor">
-          <div class="logo">
-              <img src="../../../../../assets/imagenes/Logout.jpg" alt="logo">
-          </div>
-          <div class="input-contenedor">
-              <input formControlName="username" type="text" autocomplete="on" placeholder="Nombre de usuario" >
-          </div>
-          <div class="input-contenedor">
-              <input   formControlName="password" type="password" autocomplete="on" placeholder="Contraseña" >
-          </div>
-          <button type="button" (click)="identificarusuario()" class="button">Iniciar sesión</button>
-      </div>
-  </form>
-</body>
-
-<div style="text-align: center; margin-top: 10px;">
-    <a routerLink="/register" style="color: white; text-decoration: underline;">¿No tienes cuenta? Regístrate</a>
+<div class="login-container">
+  <div class="login-box">
+    <h2>Iniciar sesión</h2>
+    <div class="user-icon">
+      <img src="/assets/Logout.jpg" alt="User Icon">
+    </div>
+    <form>
+      <input type="text" placeholder="Nombre de usuario" required>
+      <input type="password" placeholder="Contraseña" required>
+      <button type="submit">Iniciar sesión</button>
+    </form>
   </div>
-  
+</div>
 
-
-<!-- <input type="text" name="username" autocomplete="on" placeholder="Nombre de usuario" >
-<input type="password" name="password" autocomplete="on" placeholder="Contraseña" >
-https://stackoverflow.com/questions/54970352/input-elements-should-have-autocomplete-attributes -->
+<div class="footer">
+  <div class="info">
+    <img src="/assets/university-icon.png" alt="Universidad">
+    <p>Universidad Politécnico Gran Colombiano</p>
+    <p>Grupo de Trabajo 16</p>
+  </div>
+  <div class="professor">
+    <img src="/assets/teacher.icon.png" alt="Docente">
+    <p>Docente: Olarte Jhon</p>
+  </div>
+</div>

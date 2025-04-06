@@ -1,51 +1,29 @@
-<div class="container">
-    <!-- Mensajes de estado -->
-    <div *ngIf="mensajeExito" class="alert alert-success">{{ mensajeExito }}</div>
-    <div *ngIf="mensajeError" class="alert alert-danger">{{ mensajeError }}</div>
-  
-    <p>Seleccione por favor qué acción desea realizar</p>
-  
-    <div class="button-group">
-      <button mat-raised-button color="primary" (click)="create()">Crear</button>
-      <button mat-raised-button color="accent" (click)="update()">Actualizar</button>
-      <button mat-raised-button color="warn" (click)="Eliminar()">Eliminar</button>
+<div class="login-container">
+  <div class="overlay"></div>
+  <div class="login-box">
+    <div class="user-icon">
+      <img src="assets/imagenes/user-icon.png" alt="User Icon" />
     </div>
-  
-    <!-- Sección Crear -->
-    <div *ngIf="habilitarCreate" class="mt-4">
-      <h3>Registrar nuevo activo</h3>
-      <form #createForm="ngForm" (ngSubmit)="Enviar()" class="form-grid">
-        <!-- Cada campo con validación -->
-        <mat-form-field appearance="outline">
-          <mat-label>Tipo</mat-label>
-          <input matInput [(ngModel)]="enviarActivo.type" name="type" required>
-        </mat-form-field>
-        
-        <!-- Repetir para cada campo con su configuración específica -->
-        
-        <div class="action-buttons">
-          <button mat-raised-button color="primary" type="submit" 
-                  [disabled]="!createForm.valid || loading">
-            <span *ngIf="!loading">Guardar</span>
-            <mat-spinner *ngIf="loading" diameter="20"></mat-spinner>
-          </button>
-          <button mat-raised-button type="button" (click)="resetForms()">Cancelar</button>
-        </div>
-      </form>
+    <h2>LOGIN</h2>
+    <form>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Iniciar sesión</button>
+      <div class="links">
+        <a href="#">Recuperar contraseña</a>
+        <a href="#">Crear cuenta</a>
+      </div>
+    </form>
+  </div>
+  <div class="footer">
+    <div class="info">
+      <img src="assets/imagenes/university-icon.png" alt="Universidad" width="20" />
+      <p>Universidad Politécnico Gran Colombiano</p>
+      <p>Grupo de Trabajo 16</p>
     </div>
-  
-    <!-- Sección Actualizar -->
-    <div *ngIf="habilitarUpdate" class="mt-4">
-      <!-- Contenido actualización... -->
-    </div>
-  
-    <!-- Sección Eliminar -->
-    <div *ngIf="habilitarDelete" class="mt-4">
-      <!-- Contenido eliminación... -->
-    </div>
-  
-    <!-- Diálogo de confirmación -->
-    <div *ngIf="confirmarEliminar" class="confirmation-dialog">
-      <!-- Contenido confirmación... -->
+    <div class="professor">
+      <img src="assets/imagenes/teacher-icon.png" alt="Docente" width="20" />
+      <p>Docente: Olarte Jhon</p>
     </div>
   </div>
+</div>

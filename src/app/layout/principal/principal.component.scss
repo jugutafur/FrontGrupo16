@@ -1,34 +1,20 @@
-.content {
-  background-color: #f2f7f2;
-  width: 90%;
-  margin: auto;
-  padding: 20px;
-  border-radius: 10px;
+.login-container {
+  text-align: center;
+  width: 300px;
+  margin: 50px auto;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
 }
 
 button {
-  margin-right: 10px;
-}
-
-.centerText {
-  text-align: center;
-  background-color: #f2f2f2;
-}
-
-.table th,
-.table td {
-  font-size: 16px;
-  vertical-align: middle !important;
-}
-
-.table th {
-  background-color: #e9ecef;
-}
-
-.table td {
-  background-color: #fff;
-}
-
-.table-responsive {
-  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }

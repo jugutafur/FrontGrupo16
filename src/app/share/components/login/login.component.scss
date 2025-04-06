@@ -1,0 +1,106 @@
+/* Estilos globales */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: gray;
+    background-size: cover;
+    background-attachment: fixed;
+  /* background-image: url("assets/imagenes/background.jpg");*/
+    /* Compatibilidad con OpenType features */
+    -webkit-font-feature-settings: "liga" 1;
+    -moz-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga" 1;
+  }
+ 
+  
+  /* Contenedor principal */
+  .contenedor {
+    display: grid;
+    place-items: center; /* Alternativa más limpia */
+    width: 100%;
+  }
+  
+  /* Estilo del formulario */
+  .formulario {
+    background: rgba(255, 255, 255, 0.2); /* Blanco con 20% de opacidad */
+    margin-top: 150px;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Efecto difuminado */
+  }
+  
+  /* Título principal */
+  h1 {
+    text-align: center;
+    color: #1a2537;
+    font-size: 40px;
+  }
+  
+  /* Campos de entrada */
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"] {
+    color: black;
+    background-color: #C8C5C5;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 22px;
+  }
+  
+  /* Contenedor de inputs */
+  .input-contenedor {
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 22px;
+    display: grid;
+    place-items: center;
+    width: 100%;
+  }
+  
+  /* Botón */
+  .button {
+    background-color: #007BFF; /* Azul moderno */
+    color: rgb(85, 18, 241); /* Texto blanco */
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 22px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+  }
+  
+  .button:hover {
+    background: #fcfcfc;
+  }
+  
+  /* Responsive para pantallas grandes */
+  @media (min-width: 768px) {
+    .formulario {
+      width: 500px;
+      margin: 150px auto;
+    }
+  }
+  
+  /* Logo */
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo img {
+    max-width: 120px;
+    height: auto;
+  }
+  

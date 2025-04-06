@@ -1,92 +1,127 @@
 /* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  background: gray;
-  background-size: cover;
-  background-attachment: fixed;
- // background-image: url("../assets/imagenes/Principal.jpg");
-}
-
-.contenedor{
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  padding: auto;
-}
-
-.formulario{
-  background: #fff;
-  margin-top: 150px;
-  padding: 3px;
-}
-
-h1{
-  text-align: center;
-  color: #1a2537;
-  font-size: 40px;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type=tel]{
-  color: black;
-  background-color: #C8C5C5;
-  font-size: 24px;
-  width: 100%;
-  padding: 10px;
-  border: 3px none;
-  border-radius: 22px;
-}
-
-.input-contenedor{
-  margin-bottom: 15px;
-  border: 1px solid #aaa;
-  border: 3px none;
-  border-radius: 22px;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  padding: auto;
-}
-
-.button{
-  border: none;
-  width: 100%;
-  color: black;
-  font-size: 20px;
-  background: #1a2537;
-  padding: 15px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: 3px none;
-  border-radius: 22px;
-  background-color: #ABB095;
-  display: block;
-  margin: 0 auto;
-
-
-}
-
-@media(min-width: 768px) {
-  .formulario{
-      margin: auto;
-      width: 500px;
-      margin-top: 150px;
-      border-radius: 2%;
-  }
-}
-
-.logo{
+.login-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  size: 120%;
+  min-height: 100vh;
+  width: 100%;
+  background: url('/assets/imagenes/background.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 37, 55, 0.7);
+  z-index: 1;
+}
+
+.login-box {
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+  width: 300px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #1a2537;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  background: #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-box button {
+  background-color: #ABB095;
+  color: #1a2537;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #9da782;
+}
+
+.links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #1a2537;
+}
+
+.user-icon img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.footer {
+  margin-top: 40px;
+  color: white;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 100%;
+}
+
+.footer img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.footer .info,
+.footer .professor {
+  display: flex;
+  align-items: center;
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+
+  /* Compatibilidad multiplataforma */
+  -webkit-font-feature-settings: 'liga';
+  -moz-font-feature-settings: 'liga';
+  -ms-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }

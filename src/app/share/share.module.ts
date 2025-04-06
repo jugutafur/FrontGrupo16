@@ -1,4 +1,4 @@
-// src/app/share/share.module.ts
+/// src/app/share/share.module.ts
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
