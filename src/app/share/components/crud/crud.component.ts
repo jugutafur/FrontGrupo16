@@ -18,7 +18,7 @@ export class CrudComponent {
   consultarCuidades : string = "";
   consultarArea : string = "";
   id : String = "";
-  idDelete : string = ""+this.id;
+  idDelete: string = "";
   enviarActivo : Active = {
     id:null,
     type : null,
@@ -58,10 +58,10 @@ export class CrudComponent {
     this.habilitarUpdate2 = false;
   }
 
-  Enviar(){
-    this.habilitarCreate=false;
-    console.log("esto es el objeto que envio"+ this.enviarActivo);
-    this.toastrService.success("Registro Guardado con exito");
+  Enviar() {
+    this.habilitarCreate = false;
+    console.log("Objeto que envío:", this.enviarActivo);
+    this.toastrService.success("Registro guardado con éxito");
     this.toastrService.success("Por favor actualizar la tabla");
   }
 
@@ -69,11 +69,11 @@ export class CrudComponent {
   buscar(){
     this.apiService.updateActivo(this.id).subscribe(data =>{
       this.enviarActivo = data
-      if (data == null){
+      if (!data) {
         this.habilitarUpdate2 = false;
-        this.toastrService.error("El numero ingresado no pertenece a la tabla");
+        this.toastrService.error("El número ingresado no pertenece a la tabla");
       } else {
-        //console.log(this.enviarActivo);
+        this.enviarActivo = data;
         this.habilitarUpdate2 = true;
       }
     });

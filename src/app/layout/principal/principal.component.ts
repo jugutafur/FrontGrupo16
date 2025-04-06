@@ -4,6 +4,7 @@ import { archivo, Person, Machine, Purchuse, Active } from '../../core/models/Ar
 import { ApiService } from '../../core/services/service.service';
 import { Busqueda } from '../../core/models/Optiones';
 
+
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.component.html',

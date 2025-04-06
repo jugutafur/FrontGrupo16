@@ -6,3 +6,12 @@ button{
   text-align: center;
   background-color: #f2f2f2;
 }
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.container {
+  padding: 16px;
+}

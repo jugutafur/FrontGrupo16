@@ -1,0 +1,9 @@
+<div class="registro-container">
+    <h2>Registro de Usuario</h2>
+    <form [formGroup]="fgRegister" class="formulario" (ngSubmit)="registrarse()">
+      <input type="text" formControlName="usuario" placeholder="Nombre de usuario" required />
+      <input type="password" formControlName="clave" placeholder="Contraseña" required />
+      <button type="submit">Registrarse</button>
+    </form>
+  </div>
+  

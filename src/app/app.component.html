@@ -1,1 +1,51 @@
-<router-outlet></router-outlet>
+<div class="container">
+    <!-- Mensajes de estado -->
+    <div *ngIf="mensajeExito" class="alert alert-success">{{ mensajeExito }}</div>
+    <div *ngIf="mensajeError" class="alert alert-danger">{{ mensajeError }}</div>
+  
+    <p>Seleccione por favor qué acción desea realizar</p>
+  
+    <div class="button-group">
+      <button mat-raised-button color="primary" (click)="create()">Crear</button>
+      <button mat-raised-button color="accent" (click)="update()">Actualizar</button>
+      <button mat-raised-button color="warn" (click)="Eliminar()">Eliminar</button>
+    </div>
+  
+    <!-- Sección Crear -->
+    <div *ngIf="habilitarCreate" class="mt-4">
+      <h3>Registrar nuevo activo</h3>
+      <form #createForm="ngForm" (ngSubmit)="Enviar()" class="form-grid">
+        <!-- Cada campo con validación -->
+        <mat-form-field appearance="outline">
+          <mat-label>Tipo</mat-label>
+          <input matInput [(ngModel)]="enviarActivo.type" name="type" required>
+        </mat-form-field>
+        
+        <!-- Repetir para cada campo con su configuración específica -->
+        
+        <div class="action-buttons">
+          <button mat-raised-button color="primary" type="submit" 
+                  [disabled]="!createForm.valid || loading">
+            <span *ngIf="!loading">Guardar</span>
+            <mat-spinner *ngIf="loading" diameter="20"></mat-spinner>
+          </button>
+          <button mat-raised-button type="button" (click)="resetForms()">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  
+    <!-- Sección Actualizar -->
+    <div *ngIf="habilitarUpdate" class="mt-4">
+      <!-- Contenido actualización... -->
+    </div>
+  
+    <!-- Sección Eliminar -->
+    <div *ngIf="habilitarDelete" class="mt-4">
+      <!-- Contenido eliminación... -->
+    </div>
+  
+    <!-- Diálogo de confirmación -->
+    <div *ngIf="confirmarEliminar" class="confirmation-dialog">
+      <!-- Contenido confirmación... -->
+    </div>
+  </div>

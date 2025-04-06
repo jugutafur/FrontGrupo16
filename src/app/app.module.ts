@@ -1,39 +1,45 @@
+// src/app/app.module.ts
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
-
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { PrincipalComponent } from './layout/principal/principal.component';
-
+import { LayoutModule } from './layout/layout.module';
 import { ShareModule } from './share/share.module';
-import { CoreModule } from './core/core.module';
-import { MaterialModule } from './material/material.module';
+import { AppComponent } from './app.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PrincipalComponent
+    AppComponent
   ],
-
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    CoreModule,
-    ShareModule,
-    HttpClientModule,
-    FormsModule,
-    CommonModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    ToastrModule.forRoot()
-  ],
 
+    // Formularios
+    FormsModule,
+    ReactiveFormsModule,
+    
+
+    // Angular Material
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    
+
+    // Módulos propios
+    AppRoutingModule,
+    ShareModule,
+    LayoutModule,
+    MatProgressSpinnerModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
