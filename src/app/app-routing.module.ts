@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PrincipalComponent } from './layout/principal/principal.component';
 import { LoginComponent } from './share/components/login/login.component';
 import { RegisterComponent } from './share/components/register/register.component'; // Asegúrate de que la ruta sea correcta
 
