@@ -8,6 +8,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { AdministradorComponent } from './pages/administrador/administrador.component';
 import { ObjetivosComponent } from './pages/objetivos/objetivos.component';
+import { ShareModule } from '../share/share.module';
 
 
 @NgModule({
@@ -21,8 +22,10 @@ import { ObjetivosComponent } from './pages/objetivos/objetivos.component';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ShareModule
     
-  ]
+  ],
+  exports: [InicioComponent] 
 })
 export class CoreModule { }
