@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     let usuario = this.fgValidacion.controls["username"].value as string;
     let password = this.fgValidacion.controls["password"].value as string;
     if (this.username == usuario && this.password == password){
-      this.router.navigate(['/principal'])
+      this.router.navigate(['/Inicio'])
     }
 
   }

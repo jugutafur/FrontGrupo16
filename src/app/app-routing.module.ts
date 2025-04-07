@@ -8,15 +8,12 @@ import { UsuarioComponent } from './core/pages/usuario/usuario.component';
 import { AdministradorComponent } from './core/pages/administrador/administrador.component';
 import { ContactoComponent } from './core/pages/contacto/contacto.component';
 import { ObjetivosComponent } from './core/pages/objetivos/objetivos.component';
+import { InicioComponent } from './core/pages/inicio/inicio.component';
 
 const routes: Routes = [
   {
-    path: 'principal',
-    component: PrincipalComponent
-  },
-  {
     path: 'Inicio',
-    component: PrincipalComponent
+    component: InicioComponent
   },
   {
     path: 'login',

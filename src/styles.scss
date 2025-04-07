@@ -1,0 +1,15 @@
+.login-container {
+  min-height: 100vh; /* ✅ Esto permite crecer según el contenido */
+  width: 100vw;
+  background: url('./assets/imagenes/background.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+}
+
+  
+  .contenido{
+    color: white;
+  }
+.login-container {
+  color: white;
+}
