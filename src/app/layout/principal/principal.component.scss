@@ -1,20 +1,11 @@
+/* Fondo con imagen */
 .login-container {
-  text-align: center;
-  width: 300px;
-  margin: 50px auto;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url('./../../../assets/imagenes/background.jpg') no-repeat center center/cover;
 }
 
-input {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 8px;
-}
-
-button {
-  background-color: #007bff;
+.contenido{
   color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
 }

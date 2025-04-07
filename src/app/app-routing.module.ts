@@ -4,6 +4,10 @@ import { PrincipalComponent } from './layout/principal/principal.component';
 import { LoginComponent } from './share/components/login/login.component';
 import { RegisterComponent } from './share/components/register/register.component'; // Asegúrate de que la ruta sea correcta
 
+import { UsuarioComponent } from './core/pages/usuario/usuario.component';
+import { AdministradorComponent } from './core/pages/administrador/administrador.component';
+import { ContactoComponent } from './core/pages/contacto/contacto.component';
+import { ObjetivosComponent } from './core/pages/objetivos/objetivos.component';
 
 const routes: Routes = [
   {
@@ -11,12 +15,28 @@ const routes: Routes = [
     component: PrincipalComponent
   },
   {
+    path: 'Inicio',
+    component: PrincipalComponent
+  },
+  {
     path: 'login',
     component: LoginComponent
   },
   {
-    path: 'register',
-    component: RegisterComponent  // Asegúrate de que la ruta sea correcta
+    path: 'Usuario',
+    component: UsuarioComponent
+  },
+  {
+    path: 'Administrador',
+    component: AdministradorComponent
+  },
+  {
+    path: 'Contacto',
+    component: ContactoComponent
+  },
+  {
+    path: 'Objetivos',
+    component: ObjetivosComponent
   },
   {
     path: '',

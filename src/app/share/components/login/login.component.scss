@@ -1,3 +1,28 @@
+/* Fondo con imagen */
+.login-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url('../../../../assets/imagenes/background.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Caja de login */
+.login-box {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 320px;
+}
+
+
 /* Estilos globales */
 html, body {
     height: 100%;

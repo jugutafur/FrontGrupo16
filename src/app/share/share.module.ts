@@ -2,45 +2,39 @@
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
-import { CrudComponent } from './components/crud/crud.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { BannerComponent } from './components/banner/banner.component';
-import { RegisterComponent } from './components/register/register.component';
-import { LoginComponent } from './components/login/login.component';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { RouterModule } from '@angular/router';
 
+import { FooterComponent } from './components/footer/footer.component';
+import { CrudComponent } from './components/crud/crud.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { MaterialModule } from '../material/material.module';
+
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
     CrudComponent,
     FooterComponent,
-    BannerComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    MenuComponent
   ],
   imports: [
     CommonModule,
+    RouterModule,
     FormsModule,
+    MaterialModule,
     ReactiveFormsModule,
-
-    // Angular Material
-    MatFormFieldModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatProgressSpinnerModule
     ],
   exports: [
     CrudComponent,
     FooterComponent,
-    BannerComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    MenuComponent
   ]
 })
 export class ShareModule {}

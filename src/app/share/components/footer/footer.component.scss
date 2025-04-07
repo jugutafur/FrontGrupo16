@@ -1,29 +1,251 @@
-.contenido{
-  background-color: #292f36;
-  color: #ffffff;
+/* Fondo con imagen */
+.login-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url('../../../../assets/imagenes/background.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-img {
-  display: inline-block;
-  margin-left: 10%;
-  margin-top: 1%;
+
+/* Caja de footer */
+.footer-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-p {
-
-  display: inline-block;
+.info {
   margin-left: 100px;
+  margin-right: 500px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.professor {
+  margin-left: 100px;
+  margin-right: 500px;
+}
+
+/* Capa de opacidad para mejorar contraste */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.user-icon img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Estilos de los inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Botón de inicio de sesión */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
   font-size: 18px;
-  width: 250px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-section{
-  margin: 20px auto;
-  padding: 0% 160%;
+button:hover {
+  background-color: #0056b3;
 }
 
-.contenido{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  column-gap: 1rem;
+/* Links de opciones */
+.links {
+  margin-top: 10px;
+}
+
+.links a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer con información */
+.footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  color: white;
+}
+
+.footer img {
+  width: 50px;
+  height: auto;
+}
+
+.footer .info,
+.footer .professor {
+  display: flex;
+  align-items: center;
+}
+
+.footer p {
+  margin-left: 10px;
+}
+
+/* You can add global styles to this file, and also import other style files */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url('/assets/imagenes/background.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 37, 55, 0.7);
+  z-index: 1;
+}
+
+.login-box {
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+  width: 300px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #1a2537;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  background: #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-box button {
+  background-color: #ABB095;
+  color: #1a2537;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #9da782;
+}
+
+.links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #1a2537;
+}
+
+.user-icon img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.footer {
+  margin-top: 40px;
+  color: white;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 100%;
+}
+
+.footer img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.footer .info,
+.footer .professor {
+  display: flex;
+  align-items: center;
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+
+  /* Compatibilidad multiplataforma */
+  -webkit-font-feature-settings: 'liga';
+  -moz-font-feature-settings: 'liga';
+  -ms-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }
