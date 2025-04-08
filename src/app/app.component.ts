@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms'; // Formularios template-driven
 
 @Component({
-  selector: 'app-root', // ✅ el selector debe ser 'app-root'
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root', // ✅ el selector debe ser 'app-root'
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent { // ✅ el nombre de la clase debe ser AppComponent
   habilitarCreate = false;

@@ -4,9 +4,10 @@ import { ApiService } from '../../../core/services/service.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-crud',
-  templateUrl: './crud.component.html',
-  styleUrls: ['./crud.component.scss']
+    selector: 'app-crud',
+    templateUrl: './crud.component.html',
+    styleUrls: ['./crud.component.scss'],
+    standalone: false
 })
 export class CrudComponent {
 
