@@ -78,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "FrontASDGrupo:build:production"
+              "buildTarget": "FrontASDGrupo:build:production"
             },
             "development": {
-              "browserTarget": "FrontASDGrupo:build:development"
+              "buildTarget": "FrontASDGrupo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FrontASDGrupo:build"
+            "buildTarget": "FrontASDGrupo:build"
           }
         },
         "test": {
