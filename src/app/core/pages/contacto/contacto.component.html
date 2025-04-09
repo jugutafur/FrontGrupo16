@@ -1,23 +1,21 @@
 <div class="login-container">
-    <app-menu></app-menu>
-    <div>contacto</div>
-    <div class="container">
+  <app-menu></app-menu>
 
-        <h1>Contáctanos!</h1>
-        <form action="get">
-        <div class="input-group">
-          <label for="name">Nombre</label>
-          <input type="text" name="nombre" id="name" />
-    
-          <label for="email">Correo electronico</label>
-          <input type="email" name="email" id="email" />
-    
-          <label for="message">Como te ayudamos?</label>
-          <input type="text" name="message" id="message">
-    
-          <input class="button" type="submit" value="Enviar">
-    
-        
-        </div>
-        </form>
+  <div class="container">
+    <form>
+      <h1>Contáctanos!</h1>
+      <div class="input-group">
+        <label for="name">Nombre</label>
+        <input type="text" name="nombre" id="name" />
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" name="email" id="email" />
+
+        <label for="message">¿Cómo te ayudamos?</label>
+        <textarea name="message" id="message" rows="4"></textarea>
+
+        <input class="button" type="submit" value="Enviar" />
+      </div>
+    </form>
+  </div>
 </div>

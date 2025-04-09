@@ -1,23 +1,69 @@
-.container {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
+.login-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(/FrontGrupo16-master/src/assets/imagenes/background.jpg);
+    background-image: url('/assets/imagenes/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-form{
-    padding: 50px 55px;
+    padding: 20px;
+  }
+  
+  form {
+    background-color: rgba(0, 0, 0, 0.6); /* semitransparente */
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 100%;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-align: left;
+  }
+  
+  form h1 {
     text-align: center;
-    border-radius: 20px;
-    width: 340px;
-}
-
-.input-group{
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .input-group {
     display: flex;
     flex-direction: column;
-    text-align: left;
-}
+    gap: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #000;
+  }
+  
+  input.button {
+    background-color: #1abc9c;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  input.button:hover {
+    background-color: #16a085;
+  }
+  
