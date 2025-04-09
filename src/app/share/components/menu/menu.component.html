@@ -1,8 +1,9 @@
-<div>
-    <nav>
-        <ul>
+<br>
+<div class="nav-container">
+    <nav class="nav1">
+      <ul class="nav-list">
             <li *ngFor="let menu of paginas let indice = index">
-                <a
+                <a class="text"
                     routerLink="/{{menu}}"
                     routerLinkActive= "active">{{menu}}
                 </a>
@@ -10,3 +11,4 @@
         </ul>
     </nav>
 </div>
+<br><br><br>

@@ -1,0 +1,31 @@
+/* Contenedor general */
+.nav-container {
+   // padding: 10px 20px;
+   width: 100%;
+   overflow-x: hidden;
+    border-radius: 8px;
+    color: white;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content:right;
+  }
+  
+  /* Cada ítem */
+  .nav-item {
+    position: relative;
+  }
+
+  .text{
+    color: white;
+    font-size: 30px;
+  }
+
+/* Barra de navegación */
+.nav1 {
+    max-width: 100%;
+  }
+  
