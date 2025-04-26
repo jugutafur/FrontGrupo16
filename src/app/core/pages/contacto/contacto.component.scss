@@ -7,12 +7,8 @@
   .container {
     flex: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    background-image: url('/assets/imagenes/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     padding: 20px;
   }
   
@@ -36,7 +32,7 @@
   .input-group {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
   }
   
   label {
