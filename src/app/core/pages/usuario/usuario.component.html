@@ -5,41 +5,68 @@
     <div class="row justify-content-center">
       <div class="col-lg-8 col-md-10">
         <div class="login-box-wrapper card shadow-lg border-0 rounded-4 p-4">
+
+          <!-- la pagina de usuario no deberia editar usuarios .. solo mostralos
           <div class="crud-buttons text-center">
-            <button type="button" onclick="crear()">Crear</button>
-            <button type="button" onclick="leer()">Leer</button>
-            <button type="button" onclick="actualizar()">Actualizar</button>
-            <button type="button" onclick="eliminar()">Eliminar</button>
+            <button type="button" (click)="abrirPopup('crear')">Crear</button>
+            <button type="button" (click)="abrirPopup('actualizar')">Actualizar</button>
+            <button type="button" (click)="abrirPopup('eliminar')">Eliminar</button>
           </div>
           <br><br>
+          -->
       
           <table border="1">
             <thead>
               <tr>
+                <th>Seleccionar</th>
                 <th>Nombre</th>
                 <th>Correo</th>
                 <th>Contraseña</th>
+                <th>ROL</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Dario lopez</td>
-                <td>Dariolopez.gmail.com</td>
-                <td>*******</td>
-              </tr>
-              <tr>
-                <td>Camila Cifuentes</td>
-                <td>CamilaCifuentes.gmail.com</td>
-                <td>*******</td>
+              <tr *ngFor="let usuario of usuarios">
+                <td><input type="checkbox" [(ngModel)]="usuario.seleccionado"></td>
+                <td>{{ usuario.nombre }}</td>
+                <td>{{ usuario.correo }}</td>
+                <td>{{ '*'.repeat(usuario.contrasena.length) }}</td>
+                <td>{{ usuario.rol }}</td>
               </tr>
             </tbody>
           </table>
-
         </div>
-  
-
       </div>
       
     </div>
+
+  <!-- Popup de edición -->
+  <div *ngIf="mostrarPopup" class="popup-overlay">
+    <div class="popup-content">
+      <h3 *ngIf="modo === 'crear'">Crear Usuario</h3>
+        <h3 *ngIf="modo === 'actualizar'">Actualizar Usuario</h3>
+        <h3 *ngIf="modo === 'eliminar'">Eliminar Usuario</h3>
+
+        <div *ngIf="modo !== 'eliminar'">
+          <label>Nombre:</label>
+          <input [(ngModel)]="usuarioEditando.nombre" type="text"><br><br>
+
+          <label>Correo:</label>
+          <input [(ngModel)]="usuarioEditando.correo" type="email"><br><br>
+
+          <label>Contraseña:</label>
+          <input [(ngModel)]="usuarioEditando.contrasena" type="password"><br><br>
+        </div>
+
+        <div *ngIf="modo === 'eliminar'">
+          <p>¿Estás seguro que quieres eliminar al usuario <strong>{{ usuarioEditando.nombre }}</strong>?</p>
+        </div>
+
+        <div class="crud-buttons text-center">
+          <button (click)="guardarCambios()">Aceptar</button>
+          <button (click)="cancelarEdicion()">Cancelar</button>
+        </div>
+    </div>
+  </div>
   </div>
 </div>

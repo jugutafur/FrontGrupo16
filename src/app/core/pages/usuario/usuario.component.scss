@@ -19,6 +19,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
+    table-layout: auto; /* Deja que las columnas se ajusten */
   }
 
   th, td {
@@ -37,5 +38,34 @@
   }
 
   .login-box-wrapper {
-    background-color: #ffffff;
+    display: inline-block; /* 🔥 clave: que el div se ajuste al tamaño del contenido */
+    padding: 20px; /* o el padding que quieras */
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    background-color: white;  
+  }
+
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .popup-content {
+    background: #007bff;
+    padding: 30px;
+    border-radius: 8px;
+    min-width: 300px;
+    text-align: center;
+  }
+
+  .crud-buttons button:hover {
+    background-color: #0056b3;
   }
