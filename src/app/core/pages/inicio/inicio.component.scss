@@ -1,21 +1,29 @@
 .principal {
-    font-size: 100px;
-    color: white;
-    font-weight: bold;
-    line-height: 0.8;
-    word-wrap: break-word;
-    text-align: center; /* Opcional: para centrar el texto */
-    margin-bottom: 15px;
-  }
+  font-size: 100px;
+  color: #B2FFFF;
+  font-weight: bold;
+  line-height: 0.8;
+  word-wrap: break-word;
+  text-align: center; 
+  margin-bottom: 15px;
+  margin-left: -50px;
+  margin-top: 40px;
+}
 
-  .secundario {
-    font-size: 20px;
-    color: white;
-    line-height: 1.5;
-    text-align: justify;
-  }
+.secundario {
+  font-size: 20px;
+  color: white;
+  line-height: 1.6;
+  text-align: center;
+  margin-left: 20px; 
+  margin-right: 120px; 
+  max-width: 550px;
+}
 
-  .contenedor-Incio{
-    margin-left: 75px;
-    margin-right: 115px;
-  }
+.contenedor-Incio{
+  margin-left: 75px;
+  margin-right: 115px;
+
+ }
+
+ 

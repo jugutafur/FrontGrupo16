@@ -1,48 +1,76 @@
+.contenedor-Incio {
+  margin-left: 75px;
+  margin-right: 115px;
+}
+
 .objetivos-container {
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .objetivos-content {
-    max-width: 1000px;
-    width: 100%;
-  }
-  
-  .descripcion {
-    margin: 1rem auto;
-    max-width: 800px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  
-  .caracteristicas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-  
-  .card {
-    background: rgba(255, 255, 255, 0.514);
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.616);
-    transition: transform 0.3s;
-  }
-  
-  .card:hover {
-    transform: scale(1.03);
-    background: rgba(255, 255, 255, 0.2);
-  }
-  
-  .contenedor-Incio{
-    margin-left: 75px;
-    margin-right: 115px;
-    justify-content:right;
-  }
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(15, 32, 39, 0.5), rgba(32, 58, 67, 0.5), rgba(44, 83, 100, 0.5));
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-objetivo {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+  color: #b2ffff;
+}
+
+.contenido-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 2rem;
+}
+
+.lado-izquierdo {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.descripcion {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.lado-derecho {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.caracteristica {
+  background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+  backdrop-filter: blur(10px); 
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  height: auto;
+  min-height: 100px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.caracteristica h3 {
+  margin-bottom: 0.3rem;
+  color: #b2ffff; 
+  font-size: 1.2rem; 
+}
+
+.caracteristica p {
+  font-size: 0.9rem;
+  line-height: 1.4; 
+  color: white; 
+}

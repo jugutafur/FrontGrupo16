@@ -1,14 +1,24 @@
-<br>
 <div class="nav-container">
-    <nav class="nav1">
-      <ul class="nav-list">
-            <li *ngFor="let menu of paginas let indice = index">
-                <a class="text"
-                    routerLink="/{{menu}}"
-                    routerLinkActive= "active">{{menu}}
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a routerLink="/Inicio" routerLinkActive="activo" class="text">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/Usuario" routerLinkActive="activo" class="text">Usuario</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/Administrador" routerLinkActive="activo" class="text">Administrador</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/Contacto" routerLinkActive="activo" class="text">Contacto</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/Objetivos" routerLinkActive="activo" class="text">Objetivos</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="triangle-container">
+  <div class="triangle-icon"></div>
+  <span class="triangle-text">Constructora Futuro 1</span>
 </div>
-<br><br><br>

@@ -1,31 +1,57 @@
-/* Contenedor general */
 .nav-container {
-   // padding: 10px 20px;
-   width: 100%;
-   overflow-x: hidden;
-    border-radius: 8px;
-    color: white;
-  }
-  
-  .nav-list {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content:right;
-  }
-  
-  /* Cada ítem */
-  .nav-item {
-    position: relative;
-  }
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(15, 32, 39, 0.5), rgba(32, 58, 67, 0.5), rgba(44, 83, 100, 0.5));
+  padding: 10px 20px;
+  border-radius: 8px;
+}
 
-  .text{
-    color: white;
-    font-size: 25px;
-  }
+.nav-list {
+  list-style: none;
+  display: flex;             
+  gap: 30px;                 
+  justify-content: center;  
+  margin: 0;
+  padding: 0;
+}
 
-/* Barra de navegación */
-.nav1 {
-    max-width: 100%;
-  }
-  
+.nav-item {
+  position: relative;
+}
+
+.text {
+  color: white;
+  font-size: 22px;          
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.text:hover,
+.activo {
+  border-bottom: 3px solid white; /* Línea debajo de la opcion */
+}
+
+.triangle-container {
+  position: absolute;
+  top: 10px;
+  left: 20px; 
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.triangle-icon {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 20px solid #ffffff;
+  margin-right: 6px;
+}
+
+.triangle-text {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
